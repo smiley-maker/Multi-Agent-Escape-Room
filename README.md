@@ -6,11 +6,13 @@ This project implements a challenging multi-agent reinforcement learning environ
 
 The escape room environment consists of two agents and several key features:
 
-*  **Limited Observability:**  Agents have partial observability; they can only sense their surroundings using forward-facing raycast sensors. These sensors detect walls, other agents, and the buttons. [!img src="./results/EscapeRoom.png" alt="Escape Room Environment"]
+*  **Limited Observability:**  Agents have partial observability; they can only sense their surroundings using forward-facing raycast sensors. These sensors detect walls, other agents, and the buttons. 
+
+<img src="./results/EscapeRoom.png" alt="Escape Room Environment" />
 
 *  **Cooperative Reward Structure:**  The reward scheme incentivizes collaboration between the agents. Agents receive a positive reward for the first time they step on a button, and a larger reward when they escape by simultaneously pressing both buttons. Negative rewards are incurred for colliding with walls and for extended time spent in the environment. A visual representation of the reward structure can be found below.
 
-[!img src="./results/EscapeRewards.png" alt="Escape Room Reward Structure"]
+<img src="./results/EscapeRewards.png" alt="Escape Room Reward Structure"/>
 
 *  **MA-POCA for Credit Assignment:**  The project utilizes ML-Agents' implementation of Multi-Agent POsthumous Credit Assignment (MA-POCA) to address credit assignment challenges in dynamic multi-agent settings. This algorithm is particularly suitable because the number of agents may fluctuate during training (e.g., agent termination).
 
@@ -18,7 +20,7 @@ The escape room environment consists of two agents and several key features:
 
 Initial experiments revealed that the agents struggled to learn the task effectively given the state space and reward configuration. This highlights the challenges associated with sparse rewards and limited communication between agents. To address these limitations, I implemented a modified reward system that provides the agents with a small, continuous reward while they remain on a button, encouraging them to stay there longer, giving the other agent time to navigate to the other button. Below is a sample of the agents training with this configuration. 
 
-[!img src="./results/EscapeAgentsTraining.mp4" alt="Escape Room Agent Training"]
+<img src="./results/EscapeAgentsTraining.mp4" alt="Video of agent training" />
 
 While the agents weren't able to learn to navigate to the goal locations in my initial tests, they did appear to understand the cooperation aspect of the challenge. Both agents moved towards each other often and tended to stay together. I plan to experiment further to improve on these results. Specifically, here are some potential areas for future exploration:
 
