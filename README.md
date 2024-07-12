@@ -20,7 +20,9 @@ The escape room environment consists of two agents and several key features:
 
 Initial experiments revealed that the agents struggled to learn the task effectively given the state space and reward configuration. This highlights the challenges associated with sparse rewards and limited communication between agents. To address these limitations, I implemented a modified reward system that provides the agents with a small, continuous reward while they remain on a button, encouraging them to stay there longer, giving the other agent time to navigate to the other button. Below is a sample of the agents training with this configuration. 
 
-<img src="./results/EscapeAgentsTraining.mp4" alt="Video of agent training" />
+
+https://github.com/user-attachments/assets/b82557ee-16ea-4a8c-92dd-fb8f8cfc8689
+
 
 While the agents weren't able to learn to navigate to the goal locations in my initial tests, they did appear to understand the cooperation aspect of the challenge. Both agents moved towards each other often and tended to stay together. I plan to experiment further to improve on these results. Specifically, here are some potential areas for future exploration:
 
